@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from 'lucide-react';
 
 const TopNavBar = () => {
@@ -13,12 +12,9 @@ const TopNavBar = () => {
         </div>
         
         <div className="flex items-center gap-4">
-          <Button 
-            className="bg-green-600 hover:bg-green-700 font-medium px-6"
-            size="sm"
-          >
+          <button className="text-gray-600 font-medium text-sm">
             Sign up
-          </Button>
+          </button>
           <button className="text-gray-600 font-medium text-sm">
             Sign in
           </button>
