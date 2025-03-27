@@ -10,7 +10,9 @@ const Index = () => {
       <TopNavBar />
       <Header />
       <NavigationMenu />
-      <main className="max-w-screen-xl mx-auto p-4"></main>
+      <main className="max-w-screen-xl mx-auto p-4">
+        {/* Main content will go here */}
+      </main>
     </div>
   );
 };
