@@ -19,19 +19,19 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({ className }) => {
           <div className="flex-1 min-w-0">
             <div className="flex">
               <button 
-                className={`px-3 py-3 font-medium text-sm flex items-center gap-1.5 relative ${activeTab === "trending" ? "" : "text-gray-400"}`}
+                className={`px-3 py-3 font-medium text-xs flex items-center gap-1.5 relative ${activeTab === "trending" ? "" : "text-gray-400"}`}
                 onClick={() => setActiveTab("trending")}
               >
                 <TrendingUp size={16} />
-                <span>{isMobile ? "" : "Trending"}</span>
+                <span className="text-xs">{isMobile ? "" : "Trending"}</span>
                 {activeTab === "trending" && <div className="absolute bottom-0 left-0 w-full h-1 bg-black"></div>}
               </button>
               <button 
-                className={`px-3 py-3 font-medium text-sm flex items-center gap-1.5 relative ${activeTab === "recommended" ? "" : "text-gray-400"}`}
+                className={`px-3 py-3 font-medium text-xs flex items-center gap-1.5 relative ${activeTab === "recommended" ? "" : "text-gray-400"}`}
                 onClick={() => setActiveTab("recommended")}
               >
                 <Sparkles size={16} />
-                <span>{isMobile ? "" : "For You"}</span>
+                <span className="text-xs">{isMobile ? "" : "What you may like"}</span>
                 {activeTab === "recommended" && <div className="absolute bottom-0 left-0 w-full h-1 bg-black"></div>}
               </button>
             </div>
