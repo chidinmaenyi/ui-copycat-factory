@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react';
 import { cn } from "@/lib/utils";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { TrendingUp, Sparkles } from "lucide-react";
 
 interface NavigationMenuProps {
   className?: string;
@@ -8,6 +10,7 @@ interface NavigationMenuProps {
 
 const NavigationMenu: React.FC<NavigationMenuProps> = ({ className }) => {
   const [activeTab, setActiveTab] = useState("trending");
+  const isMobile = useIsMobile();
 
   return (
     <nav className={cn("w-full border-b border-gray-200", className)}>
@@ -16,17 +19,19 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({ className }) => {
           <div className="flex-1 min-w-0">
             <div className="flex">
               <button 
-                className={`px-6 py-4 font-medium text-lg relative ${activeTab === "trending" ? "" : "text-gray-400"}`}
+                className={`px-3 py-3 font-medium text-sm flex items-center gap-1.5 relative ${activeTab === "trending" ? "" : "text-gray-400"}`}
                 onClick={() => setActiveTab("trending")}
               >
-                Trending
+                <TrendingUp size={16} />
+                <span>{isMobile ? "" : "Trending"}</span>
                 {activeTab === "trending" && <div className="absolute bottom-0 left-0 w-full h-1 bg-black"></div>}
               </button>
               <button 
-                className={`px-6 py-4 font-medium text-lg relative ${activeTab === "recommended" ? "" : "text-gray-400"}`}
+                className={`px-3 py-3 font-medium text-sm flex items-center gap-1.5 relative ${activeTab === "recommended" ? "" : "text-gray-400"}`}
                 onClick={() => setActiveTab("recommended")}
               >
-                What you may like
+                <Sparkles size={16} />
+                <span>{isMobile ? "" : "For You"}</span>
                 {activeTab === "recommended" && <div className="absolute bottom-0 left-0 w-full h-1 bg-black"></div>}
               </button>
             </div>
