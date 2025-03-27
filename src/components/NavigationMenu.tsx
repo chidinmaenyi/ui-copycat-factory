@@ -23,7 +23,7 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({ className }) => {
                 {activeTab === "trending" && <div className="absolute bottom-0 left-0 w-full h-1 bg-black"></div>}
               </button>
               <button 
-                className={`px-6 py-4 font-medium text-lg ${activeTab === "recommended" ? "" : "text-gray-400"}`}
+                className={`px-6 py-4 font-medium text-lg relative ${activeTab === "recommended" ? "" : "text-gray-400"}`}
                 onClick={() => setActiveTab("recommended")}
               >
                 What you may like
