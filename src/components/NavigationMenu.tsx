@@ -23,7 +23,7 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({ className }) => {
                 onClick={() => setActiveTab("trending")}
               >
                 <TrendingUp size={16} />
-                <span className="text-xs">{isMobile ? "" : "Trending"}</span>
+                <span className="text-xs">{isMobile ? "Trending" : "Trending"}</span>
                 {activeTab === "trending" && <div className="absolute bottom-0 left-0 w-full h-1 bg-black"></div>}
               </button>
               <button 
@@ -31,7 +31,7 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({ className }) => {
                 onClick={() => setActiveTab("recommended")}
               >
                 <Sparkles size={16} />
-                <span className="text-xs">{isMobile ? "" : "What you may like"}</span>
+                <span className="text-xs">{isMobile ? "For You" : "What you may like"}</span>
                 {activeTab === "recommended" && <div className="absolute bottom-0 left-0 w-full h-1 bg-black"></div>}
               </button>
             </div>
