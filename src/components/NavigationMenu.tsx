@@ -22,7 +22,7 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({ className }) => {
               onClick={() => setActiveTab("trending")}
             >
               <TrendingUp size={16} />
-              <span className="text-xs pl-1">What's Trending</span>
+              <span className="text-xs">What's Trending</span>
               {activeTab === "trending" && <div className="absolute bottom-0 left-0 w-full h-1 bg-black"></div>}
             </button>
           </div>
